@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'MainWindow.h'
 **
-** Created: Wed Nov 17 14:03:09 2010
+** Created: Sun Apr 10 17:39:51 2011
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.6.2)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_MainWindow[] = {
        4,       // revision
        0,       // classname
        0,    0, // classinfo
-      11,   14, // methods
+      12,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -34,26 +34,27 @@ static const uint qt_meta_data_MainWindow[] = {
       17,   11,   12,   11, 0x08,
       35,   11,   11,   11, 0x08,
       49,   11,   11,   11, 0x08,
-      69,   11,   11,   11, 0x08,
-      83,   11,   11,   11, 0x08,
-     103,   11,   11,   11, 0x08,
-     119,   11,   11,   11, 0x08,
-     135,   11,   11,   11, 0x08,
+      68,   11,   11,   11, 0x08,
+      88,   11,   11,   11, 0x08,
+     102,   11,   11,   11, 0x08,
+     122,   11,   11,   11, 0x08,
+     138,   11,   11,   11, 0x08,
      154,   11,   11,   11, 0x08,
-     174,   11,   11,   11, 0x08,
-     200,  195,   11,   11, 0x08,
+     173,   11,   11,   11, 0x08,
+     193,   11,   11,   11, 0x08,
+     219,  214,   11,   11, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_MainWindow[] = {
     "MainWindow\0\0bool\0openFileChooser()\0"
-    "toGrayScale()\0resizeImageDialog()\0"
-    "resizeImage()\0restoreOriginalIm()\0"
-    "binarImDialog()\0binarizeImage()\0"
-    "setWidthValue(int)\0setHeightValue(int)\0"
-    "setChosenMethod(int)\0text\0"
-    "enableBinButton(QString)\0"
+    "toGrayScale()\0applySobelFilter()\0"
+    "resizeImageDialog()\0resizeImage()\0"
+    "restoreOriginalIm()\0binarImDialog()\0"
+    "binarizeImage()\0setWidthValue(int)\0"
+    "setHeightValue(int)\0setChosenMethod(int)\0"
+    "text\0enableBinButton(QString)\0"
 };
 
 const QMetaObject MainWindow::staticMetaObject = {
@@ -88,18 +89,19 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 0: { bool _r = openFileChooser();
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = _r; }  break;
         case 1: toGrayScale(); break;
-        case 2: resizeImageDialog(); break;
-        case 3: resizeImage(); break;
-        case 4: restoreOriginalIm(); break;
-        case 5: binarImDialog(); break;
-        case 6: binarizeImage(); break;
-        case 7: setWidthValue((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 8: setHeightValue((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 9: setChosenMethod((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 10: enableBinButton((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 2: applySobelFilter(); break;
+        case 3: resizeImageDialog(); break;
+        case 4: resizeImage(); break;
+        case 5: restoreOriginalIm(); break;
+        case 6: binarImDialog(); break;
+        case 7: binarizeImage(); break;
+        case 8: setWidthValue((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 9: setHeightValue((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 10: setChosenMethod((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 11: enableBinButton((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         default: ;
         }
-        _id -= 11;
+        _id -= 12;
     }
     return _id;
 }

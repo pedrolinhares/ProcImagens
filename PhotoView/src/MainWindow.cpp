@@ -52,6 +52,13 @@ void MainWindow::createActions() {
 	binarImAction->setStatusTip (tr("Binariza a imagem segundo o limiar fornecido"));
 	binarImAction->setEnabled (false);
 	connect (binarImAction, SIGNAL(triggered()), this, SLOT(binarImDialog()));
+	
+	//Apply sobel filter imagem Action
+	sobelImAction = new QAction (tr("filtro Sobel"), this);
+	sobelImAction->setStatusTip (tr("Detectar bordas"));
+	sobelImAction->setEnabled (false);
+	connect (sobelImAction, SIGNAL(triggered()), this, SLOT(applySobelFilter()));
+	
 
 	//restore original Image Action
 	restoreOriginalImAction = new QAction (tr("Restaurar Imagem Original"), this);
@@ -70,6 +77,7 @@ void MainWindow::createMenus() {
     imageMenu->addAction (RGBtoGreyAction);
     imageMenu->addAction (imageSizeAction);
     imageMenu->addAction (binarImAction);
+	imageMenu->addAction (sobelImAction);
 	imageMenu->addSeparator();
     imageMenu->addAction (restoreOriginalImAction);
 }
@@ -272,6 +280,12 @@ void MainWindow::resizeImage(){
 	imageLabel->setPixmap (QPixmap::fromImage (*image)); 
 }
 
+//private slot
+void MainWindow::applySobelFilter() {
+	image = imageProcessor->applySobelFilter (image);
+	imageLabel->setPixmap (QPixmap::fromImage (*image)); 
+}
+
 bool MainWindow::loadImage (const QString& imageName) {
     image->load (imageName);
 
@@ -294,6 +308,7 @@ bool MainWindow::loadImage (const QString& imageName) {
 	imageSizeAction->setEnabled (true);
 	restoreOriginalImAction->setEnabled (true);
 	binarImAction->setEnabled (true);
+	sobelImAction->setEnabled (true);
 
     setWindowTitle (tr("Visualizador de Imagens - (%1)").arg(imageName));
 

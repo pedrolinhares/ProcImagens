@@ -18,6 +18,7 @@ class MainWindow : public QMainWindow {
     private slots:
         bool openFileChooser();
 		void toGrayScale();
+		void applySobelFilter();
 		void resizeImageDialog();
 		void resizeImage();
 		void restoreOriginalIm();
@@ -41,6 +42,7 @@ class MainWindow : public QMainWindow {
         QAction			*imageSizeAction;
         QAction			*restoreOriginalImAction;
         QAction			*binarImAction;
+        QAction			*sobelImAction;
         QImage			*image;
         QImage			*originalIm;
         QLabel			*imageLabel;
